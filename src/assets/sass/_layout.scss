@@ -1,0 +1,115 @@
+@use "_var.scss" as v;
+
+ul, .nav{
+    list-style: none;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.body {
+    font-family: "Cabin", sans-serif;
+    line-height: 1.55;
+    font-size: v.$size-body;
+}
+.header{
+    background-color: v.$color-two;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    .title{
+        &--princ{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.button{
+    &--header{
+        border: none;
+        padding: 9px;
+        cursor: pointer;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+    }
+    &--menuouv,&--menuferm{
+        background-image: url(../../assets/images/menu_dark.svg);
+        background-position: center;
+        justify-self: center;
+        width: 40px;
+        height: 30px;
+        padding: 0;
+    }
+    &--menuferm{
+        background-image: url(../../assets/images/close.svg);
+        justify-self: end;
+        margin-right: 27px;
+    }
+}
+.title{
+    &--princ{
+        font-size: v.$size-titleprinc;
+    }
+    &--lien{
+        color: v.$color-white;
+    }
+    &--span {
+        color: v.$color-one;
+    }
+    &--second{
+        font-size: v.$size-titlesecond;
+    }
+}
+.lightmode{
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-image: url(../../assets/images/mode_day.svg);
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    justify-self: center;
+    padding: 0;
+}
+
+.burgermenu{
+    display: none;
+    animation-name: example;
+    animation-duration: 0.3s;
+    @keyframes example {
+        0%   {left:-85vw; top:0px;}
+        100% {left:0px; top:0px;}
+      }
+}
+.body--nav-open .burgermenu{
+    position: fixed;
+    width: 90vw;
+    height: 100vh;
+    background: v.$color-two;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+    left: 0;
+    box-shadow: 2px 0 20px black;
+}
+.nav{
+    margin: 0;
+    padding-left: 5%;
+    &__el{
+        margin: 13.5px 0;
+        a{
+            color: v.$color-one;
+        }
+    }
+}
+.small-caps{
+    font-variant-caps: small-caps;
+}

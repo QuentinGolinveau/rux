@@ -1,0 +1,54 @@
+@use "_var.scss" as v;
+
+.header{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 18px repeat(2, 1fr) 18px;
+    grid-template-areas: 
+    ". . . . . ."
+    "l l d d m m"
+    "l l d d m m"
+    ". . . . . .";
+    .title{
+        &--princ{
+            grid-area: l;
+        }
+    }
+    .lightmode{
+        grid-area: d;
+    }
+    .button{
+        &--menuouv{
+            grid-area: m;
+        }
+    }
+}
+.body--nav-open .burgermenu{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+}
+.nav{
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+}
+.button{
+    &--menuferm{
+        grid-column: 3;
+        grid-row: 1; 
+    }
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr repeat(3, 1fr);
+    grid-template-rows: repeat(10, 27px);
+    grid-auto-rows: 27px;
+    grid-auto-flow: column;
+}
+.contexte{
+    grid-column: 2/8;
+    grid-row: 5/18;
+}
