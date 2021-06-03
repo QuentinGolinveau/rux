@@ -1,9 +1,17 @@
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: lime;
-}
+/*!
+***
+Projet
+***
+Projet scolaire de 2e OPT DWM
+***
+vrsn: 1.0
+***
+atr: Quentin Golinveau <quentingolinveau.be>
+***
+*/
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+@use "_type.scss";
+@use "_layout.scss";
+@use "_grid.scss";
+@use "_var.scss";
+@use "_normalize.css";

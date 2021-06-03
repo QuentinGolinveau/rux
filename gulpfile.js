@@ -38,20 +38,33 @@ const javascript = () => {
 	  .pipe(browserSyncServer.stream());
 }
 
+const video = () => {
+	return gulp.src('./src/assets/video/**/*.mp4')
+		.pipe(gulp.dest( './dist/assets/video/'));
+}
+
 const html = () => {
 	return gulp.src('./src/*.html')
 		.pipe(gulp.dest( './dist/'));
 }
+ const json = () => {
+	 return gulp.src('./src/assets/js/**/*.json')
+	 .pipe(gulp.dest('./dist/assets/js/'))
+ }
+
 
 const watchFiles = () => {
 	gulp.watch("./src/assets/sass/**/*.scss", styles);
 	gulp.watch("./src/assets/js/**/*.js", javascript);
+	gulp.watch("./src/assets/video/**/*.m4v", video);
 	gulp.watch([
 		"./src/assets/images/**/*.jpg",
 		"./src/assets/images/**/*.png",
 		"./src/assets/images/**/*.gif",
+		"./src/assets/video/**/*.ico",
 		"./src/assets/images/**/*.svg"
 	], compressImages);
+	gulp.watch("./src/assets/js/**/*json", json)
 	gulp.watch("./src/*.html", gulp.series(html, browserReload));
 }
 
@@ -75,6 +88,7 @@ const compressImages = () => {
 		"./src/assets/images/**/*.jpg",
 		"./src/assets/images/**/*.png",
 		"./src/assets/images/**/*.gif",
+		"./src/assets/video/**/*.ico",
 		"./src/assets/images/**/*.svg"
 	  ])
 	 .pipe(imagemin({
@@ -84,7 +98,7 @@ const compressImages = () => {
 	 .pipe(gulp.dest('./dist/assets/images/'))
 }
 
-const build = gulp.series(html, styles, javascript, compressImages);
+const build = gulp.series(html, styles, javascript, compressImages, video, json);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 const compress = gulp.series(compressImages);
 
