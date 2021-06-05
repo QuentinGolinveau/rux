@@ -7,7 +7,12 @@ a{
     cursor: pointer;
     text-decoration: none;
 }
-
+p{
+    margin: 0;
+}
+section{
+    margin-top: 10%;
+}
 .body {
     font-family: "Cabin", sans-serif;
     line-height: 1.55;
@@ -18,6 +23,7 @@ a{
     width: 100vw;
     position: fixed;
     top: 0;
+    z-index: 10;
     .title{
         &--princ{
             margin: 0;
@@ -50,6 +56,7 @@ a{
     }
 }
 .title{
+    margin: 0;
     &--princ{
         font-size: v.$size-titleprinc;
     }
@@ -61,6 +68,12 @@ a{
     }
     &--second{
         font-size: v.$size-titlesecond;
+    }
+    &--trois{
+        font-size: v.$size-titletrois;
+    }
+    &--quatre{
+        font-size: v.$size-titlequatre;
     }
 }
 .lightmode{
@@ -112,4 +125,64 @@ a{
 }
 .small-caps{
     font-variant-caps: small-caps;
+}
+.groupe{
+    ul{
+        margin: 0;
+    }
+}
+.phase, .points, .soulist{
+    &--li{
+        position: relative;
+        margin: 18px 0;
+        &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 12px;
+            height: 4px;
+            background-image: -webkit-gradient(linear, left top, right top, from(v.$color-two), to(v.$color-one));
+            background-image: linear-gradient(90deg,v.$color-two  0%,v.$color-one  100%);
+            border-radius: 4px;
+            left: -30px;
+            top: 12px;
+        }
+    }
+}
+.soulist{
+    margin: 12.5px 0 18px 0;
+    &--li{
+        margin: 12.5px 0;
+        &::before{
+            left: -12px;
+            width: 4px;
+            background-image: -webkit-gradient(linear, left top, right top, from(v.$color-one), to(v.$color-two));
+            background-image: linear-gradient(90deg,v.$color-one  0%,v.$color-two  100%);
+        }
+    }
+}  
+.test{
+    &__el{
+        &--cita{
+            font-size: v.$size-cita;
+            text-align: center;
+            font-style: italic;
+            border-top: 1px solid v.$color-one;
+            border-bottom: 1px solid v.$color-one;
+            padding: 18px 0;
+        }
+    }
+}
+.figure{
+    display: flex;
+    flex-direction: column;
+    background-color: v.$color-one;
+    margin: 0;
+    outline: 9px solid v.$color-one;
+}
+.figcaption{
+    padding: 12.5px 0;
+    font-size: v.$size-caption;
+    font-style: italic;
+    text-align: center;
 }
