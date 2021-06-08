@@ -179,13 +179,22 @@ section{
 .figure{
     display: flex;
     flex-direction: column;
-    background-color: v.$color-one;
     margin: 0;
-    outline: 9px solid v.$color-one;
+    img{
+        border: 4px solid v.$color-one;
+    }
 }
 .figcaption{
     padding: 12.5px 0;
     font-size: v.$size-caption;
     font-style: italic;
     text-align: center;
+    background-color: v.$color-one;
+}
+.horizon{
+    &__el{
+        &--2p{
+            font-style: italic;
+        }
+    }
 }

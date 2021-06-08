@@ -90,16 +90,16 @@
             grid-column: 2/-1;
         }
         &--1h4{
-            grid-row: 7/8;
+            grid-row: 6/7;
         }
         &--1ul{
-            grid-row: 8/16;
+            grid-row: 7/15;
         }
         &--2h4{
-            grid-row: 17/18;
+            grid-row: 16/17;
         }
         &--2ul{
-            grid-row: 18/23;
+            grid-row: 17/22;
         }
     }
 }
@@ -178,7 +178,124 @@
         }
         &--figure{
             grid-column: 1/-1;
-            grid-row: 19/32;
+            grid-row: 19/31;
+        }
+    }
+}
+.horizon{
+    grid-column: 2/8;
+    grid-row: 186;
+    &__el{
+        grid-column: 1/-1;
+        &--h3{
+            grid-row: 1/3;
+        }
+        &--1p{
+            grid-row: 4/12;
+        }
+        &--1figure{
+            grid-row: 14/21;
+        }
+        &--2figure{
+            grid-row: 23/35;
+        }
+        &--1h4,&--1ul,&--4h4,&--4ul,&--5h4,&--5ul,&--8h4,&--8ul{
+            grid-column: 2/-1;
+        }
+        &--1h4{
+            grid-row: 37/38;
+        }
+        &--1ul{
+            grid-row: 38/47;
+        }
+        &--2h4,&--2ul,&--3h4,&--3ul{
+            grid-column: 1/8;
+        }
+        &--2h4{
+            grid-row: 48/49;
+        }
+        &--2ul{
+            grid-row: 49/54;
+        }
+        &--3figure{
+            grid-row: 57/63;
+        }
+        &--3h4{
+            grid-row: 65/66;
+        }
+        &--3ul{
+            grid-row: 66/84;
+        }
+        &--4h4{
+            grid-row: 84/85;
+        }
+        &--4ul{
+            grid-row: 85/93;
+        }
+        &--4figure{
+            grid-row: 96/109;
+        }
+        &--5h4{
+            grid-row: 111/112;
+        }
+        &--5ul{
+            grid-row: 112/114;
+        }
+        &--6h4{
+            grid-row: 115/116;
+        }
+        &--6ul{
+            grid-row: 116/120;
+        }
+        &--5figure{
+            grid-row: 123/129;
+        }
+        &--7h4{
+            grid-row: 131/132;
+        }
+        &--7ul{
+            grid-row: 132/135;
+        }
+        &--8h4{
+            grid-row: 136/137;
+        }
+        &--8ul{
+            grid-row: 137/141;
+        }
+        &--2p{
+            grid-row: 143/145;
+        }
+    }
+}
+.croquis{
+    grid-column: 2/8;
+    grid-row: 335;
+    &__el{
+        grid-column: 1/-1;
+        &--h3{
+            grid-row: 1/3;
+        }
+        &--1p{
+            grid-column: 1/8;
+            grid-row: 4/8;
+        }
+        &--1figure{
+            grid-row: 10/19;
+        }
+        &--2p,&--3p,&--4p{
+            grid-column: 2/-1;
+        }
+        &--2p{
+            grid-row: 20/26;
+        }
+        &--3p{
+            grid-row: 27/35;
+        }
+        &--4p{
+            grid-row: 36/44;
+        }
+        &--2figure{
+            grid-row: 47/55;
         }
     }
 }
