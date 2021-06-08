@@ -45,7 +45,7 @@ for(let navLink of navLinks){
 
 // COPYRIGHT
 
-// let ajd = new Date();
-// let year = ajd.getFullYear();
-// let copyright = document.querySelector(".copyright");
-// copyright.innerHTML = "©"+ year;
+let ajd = new Date();
+let year = ajd.getFullYear();
+let copyright = document.querySelector(".copyright");
+copyright.innerHTML = "©"+ year;

@@ -4,6 +4,7 @@ ul, .nav{
     list-style: none;
 }
 a{
+    color: v.$color-black;
     cursor: pointer;
     text-decoration: none;
 }
@@ -75,6 +76,9 @@ section{
     &--quatre{
         font-size: v.$size-titlequatre;
     }
+    &--footer{
+        color: v.$color-two;
+    }
 }
 .lightmode{
     border: none;
@@ -95,10 +99,10 @@ section{
     display: none;
     animation-name: example;
     animation-duration: 0.3s;
-    @keyframes example {
+    @keyframes example{
         0%   {left:-85vw; top:0px;}
-        100% {left:0px; top:0px;}
-      }
+        100% {left:0vw; top:0px;}
+    }
 }
 .body--nav-open .burgermenu{
     position: fixed;
@@ -131,7 +135,7 @@ section{
         margin: 0;
     }
 }
-.phase, .points, .soulist{
+.phase, .points, .soulist, .info{
     &--li{
         position: relative;
         margin: 18px 0;
@@ -196,5 +200,89 @@ section{
         &--2p{
             font-style: italic;
         }
+    }
+}
+.croquis{
+    &__el{
+        &--3figure{
+            img{
+                width: 50vw;
+                align-self: center;
+            }
+        }
+    }
+}
+.proto{
+    &__el{
+        &--2figure,&--3figure,&--4figure,&--5figure,&--6figure,&--7figure,&--8figure,&--9figure{
+            img{
+                width: 50vw;
+                align-self: center;
+            }
+        }
+    }
+}
+.footer{
+    background-color: v.$color-one;
+    .liste-compl{
+        a{
+            text-decoration: underline v.$color-two;
+        }
+    }
+    .liste-copy{
+        li{
+            position: relative;
+            overflow: hidden;
+        }
+        a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-indent: 100%;
+            white-space: nowrap;
+        }
+    }
+}
+.rux, .test{
+    a{
+        color: v.$color-two;
+        text-decoration: underline v.$color-one;
+    }
+}
+.dark{
+    background-color: v.$color-black;
+    color: v.$color-white;
+    .figcaption{
+        color: v.$color-black;
+    }
+    .lightmode{
+        background-image: url(../../assets/images/mode_night.svg);
+    }
+    .header{
+        background-color: v.$color-one;
+    }
+    .title{
+        &--span{
+            color: v.$color-two;
+        }
+        &--princ{
+            a{
+                color: v.$color-black;
+            }
+        }
+    }
+    .footer{
+        a{
+            color: v.$color-two;
+        }
+    }
+    a{
+        color: v.$color-one;
+    }
+    .button--menuouv{
+        background-image: url(../../assets/images/menu.svg);
+    }
+    .copyright{
+        color: v.$color-black;
     }
 }
